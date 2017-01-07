@@ -1,5 +1,5 @@
 import {NgModule} from "@angular/core";
-import {MdListModule, MdIconModule, MdCheckboxModule} from "@angular/material";
+import {MdListModule, MdIconModule, MdCheckboxModule, MdButtonModule, MdInputModule} from "@angular/material";
 import {CommonModule} from "@angular/common";
 import {FriendsComponent} from "./friends.component";
 
@@ -11,7 +11,9 @@ import {FriendsComponent} from "./friends.component";
         CommonModule,
         MdListModule,
         MdIconModule,
-        MdCheckboxModule
+        MdCheckboxModule,
+        MdButtonModule,
+        MdInputModule
     ],
     exports: [
         FriendsComponent

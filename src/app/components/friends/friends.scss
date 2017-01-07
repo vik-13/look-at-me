@@ -1,0 +1,9 @@
+.close-button {
+    display: none;
+}
+
+md-list-item:hover {
+    .close-button {
+        display: block;
+    }
+}

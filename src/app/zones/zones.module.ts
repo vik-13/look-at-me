@@ -4,7 +4,7 @@ import {InternalZoneComponent} from "./internal-zone/internal-zone.component";
 import {RouterModule} from "@angular/router";
 import {
     MdToolbarModule, MdSidenavModule, MdIconModule, MdButtonModule, MdListModule,
-    MdRippleModule, MdCheckboxModule, MdSlideToggleModule
+    MdRippleModule, MdCheckboxModule, MdSlideToggleModule, MdMenuModule
 } from "@angular/material";
 import {FriendsModule} from "../components/friends/friends.module";
 
@@ -19,6 +19,7 @@ import {FriendsModule} from "../components/friends/friends.module";
         MdRippleModule,
         MdCheckboxModule,
         MdSlideToggleModule,
+        MdMenuModule,
 
         FriendsModule
     ],

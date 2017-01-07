@@ -10,10 +10,13 @@ import {AngularFireModule, AuthProviders, AuthMethods} from "angularfire2";
 import {MapComponent} from "./components/map/map.component";
 import {ZonesModule} from "./zones/zones.module";
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 import {appRoutes} from "./app.routes";
 import {SignInModule} from "./components/sign-in/sign-in.module";
 import {SignUpModule} from "./components/sign-up/sign-up.module";
 import {SettingsComponent} from "./components/settings/settings.component";
+import {SharedModule} from "./shared/shared.module";
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDMXtuuM6cd5pKeoVHiaTDkF6EfNkHzoO4",
@@ -42,7 +45,12 @@ const firebaseAuthConfig = {
         MaterialModule.forRoot(),
         AngularFireModule.initializeApp(firebaseConfig, firebaseAuthConfig),
 
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyCknDrX9kTGd0Md9t-Uk3a5ka8XuBZtyjI'
+        }),
+
         ZonesModule,
+        SharedModule,
         SignInModule,
         SignUpModule
     ],
