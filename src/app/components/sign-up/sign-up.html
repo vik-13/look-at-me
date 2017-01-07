@@ -1,0 +1,22 @@
+<md-card color="primary">
+    <md-card-title>Sign-up</md-card-title>
+    <md-card-content>
+        <div>
+            <md-input placeholder="Name"></md-input>
+        </div>
+        <div>
+            <md-input placeholder="Email"></md-input>
+        </div>
+        <div>
+            <md-input placeholder="Password"></md-input>
+        </div>
+        <div>
+            <md-input placeholder="Retype it"></md-input>
+        </div>
+    </md-card-content>
+    <md-card-actions class="flex-row">
+        <button md-button color="primary" [routerLink]="['/sign-in']">Sign in</button>
+        <div class="flex"></div>
+        <button md-raised-button color="primary">Sign-up</button>
+    </md-card-actions>
+</md-card>
