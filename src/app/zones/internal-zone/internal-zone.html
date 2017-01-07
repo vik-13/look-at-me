@@ -1,2 +1,22 @@
-It`s Internal-zone component
-<router-outlet></router-outlet>
+<div class="inner-page flex-col">
+    <md-toolbar color="primary">
+        <button md-fab class="flat-button" color="primary" (click)="sidenav.toggle()">
+            <md-icon>people</md-icon>
+        </button>
+        <span class="main-title link" md-ripple routerLink="/map">Look At Me</span>
+        <span class="flex"></span>
+        <md-slide-toggle color="warn">
+            You see me!
+        </md-slide-toggle>
+        <button md-button routerLink="/settings">Settings</button>
+        <button md-button>Sign Out</button>
+    </md-toolbar>
+    <md-sidenav-container class="flex">
+        <md-sidenav mode="over" opened="true" #sidenav>
+            <friends></friends>
+        </md-sidenav>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </md-sidenav-container>
+</div>

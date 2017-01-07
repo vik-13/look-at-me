@@ -1,0 +1,24 @@
+.inner-page {
+    height: 100%;
+}
+
+.flat-button {
+    box-shadow: none;
+
+    &:active {
+        box-shadow: none;
+    }
+}
+
+md-list-item {
+    cursor: default;
+}
+
+.main-title {
+    padding: 10px;
+}
+
+.link {
+    position: relative;
+    cursor: pointer;
+}

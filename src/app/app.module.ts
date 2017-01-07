@@ -12,8 +12,8 @@ import {ZonesModule} from "./zones/zones.module";
 
 import {appRoutes} from "./app.routes";
 import {SignInModule} from "./components/sign-in/sign-in.module";
-import {SignUpComponent} from "./components/sign-up/sign-up.component";
 import {SignUpModule} from "./components/sign-up/sign-up.module";
+import {SettingsComponent} from "./components/settings/settings.component";
 
 export const firebaseConfig = {
     apiKey: "AIzaSyDMXtuuM6cd5pKeoVHiaTDkF6EfNkHzoO4",
@@ -31,6 +31,7 @@ const firebaseAuthConfig = {
 @NgModule({
     declarations: [
         AppComponent,
+        SettingsComponent,
         MapComponent
     ],
     imports: [
@@ -50,4 +51,4 @@ const firebaseAuthConfig = {
         AppComponent
     ]
 })
-export class AppModule { }
+export class AppModule {}
