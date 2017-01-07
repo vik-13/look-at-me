@@ -1,22 +1,21 @@
-<md-card color="primary">
-    <md-card-title>Sign-up</md-card-title>
-    <md-card-content>
-        <div>
-            <md-input placeholder="Name"></md-input>
-        </div>
-        <div>
-            <md-input placeholder="Email"></md-input>
-        </div>
-        <div>
-            <md-input placeholder="Password"></md-input>
-        </div>
-        <div>
-            <md-input placeholder="Retype it"></md-input>
-        </div>
-    </md-card-content>
-    <md-card-actions class="flex-row">
-        <button md-button color="primary" [routerLink]="['/sign-in']">Sign in</button>
-        <div class="flex"></div>
-        <button md-raised-button color="primary">Sign-up</button>
-    </md-card-actions>
-</md-card>
+<form [formGroup]="form" (submit)="signUp(form)" novalidate autocomplete="off">
+    <md-card color="primary">
+        <md-card-title>Sign-up</md-card-title>
+        <md-card-content>
+            <div>
+                <md-input formControlName="name" required placeholder="Name"></md-input>
+            </div>
+            <div>
+                <md-input formControlName="email" required type="email" placeholder="Email"></md-input>
+            </div>
+            <div>
+                <md-input formControlName="password" required type="password" placeholder="Password"></md-input>
+            </div>
+        </md-card-content>
+        <md-card-actions class="flex-row">
+            <a md-button color="primary" [routerLink]="['/sign-in']">Sign in</a>
+            <div class="flex"></div>
+            <button type="submit" md-raised-button color="primary" [disabled]="form.invalid">Sign-up</button>
+        </md-card-actions>
+    </md-card>
+</form>
